@@ -1,0 +1,30 @@
+package com.gmail.oxapylypenko;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner a = new Scanner(System.in);
+
+		System.out.println("Input coordinated x:");
+		double x = a.nextDouble();
+		System.out.println("Input coordinated y:");
+		double y = a.nextDouble();
+
+		double s = Math.abs((4 - 24) / 2);
+		double s1 = Math.abs((4 * x - 4 * y) / 2);
+		double s2 = Math.abs((x - 6 * y) / 2);
+		double s3 = Math.abs(((4 * y + x + 24) - (4 * x + 6 * y + 4)) / 2);
+
+		if (s == (s1 + s2 + s3)) {
+			System.out.println("Poin with coordinates (" + x + " ; " + y + ") is inside triangle ABC");
+		} else {
+			System.out.println("Poin with coordinates (" + x + " ; " + y + ") is outside triangle ABC");
+		}
+		
+		a.close();
+	}
+}
